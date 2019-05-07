@@ -17,7 +17,7 @@
 4. 点击下方的`+`按钮，增加一个action。
 5. 在上方的`Provide build settings from`后面选择对应的target。
 6. 在中间的脚本框中输入以下脚本：
-```
+```shell
 # 工程目录
 rootPath = "${PROJECT_DIR}/zfplayer+ijkplayer+autoframework/"
 # 需要编译的Framework所在目录，将把对应的Framework复制到这个目录
@@ -47,11 +47,12 @@ cp -f -r $sourceFiles $targetPath
 echo "cp framework file done."
 ```
 
-最后，随意将模拟器或真机的Framework复制一份到targetPath，然后将targetPath目录下的Framework添加到工程中。
+最后，随意将模拟器或真机的Framework复制一份到`targetPath`，然后将`targetPath`目录下的Framework添加到工程中。
 
 注：
 1. 以上代码是本工程使用的脚本，如需使用请修改对应的目录。
 2. 添加Framework时不要选中`Copy items if needed`，并保证工程设置-target-Build Settings-Search Paths-Framework Search Paths中有脚本中的`targetPath`目录。
+3. 以上脚本也适用于其他区分真机、模拟器的Framework，只需要将所有区分的版本分别放入`simulatorFile`所在目录和`iphoneFile`所在目录，并随意复制一份到`targetPath`后添加进工程即可。
 
 ![屏幕快照 2019-05-07 下午10.10.07.png](https://i.loli.net/2019/05/07/5cd191def2916.png)
 ![屏幕快照 2019-05-07 下午10.09.32.png](https://i.loli.net/2019/05/07/5cd191df2a245.png)
