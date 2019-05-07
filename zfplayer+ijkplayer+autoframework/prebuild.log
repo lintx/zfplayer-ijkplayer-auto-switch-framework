@@ -1,0 +1,4 @@
+cp framework file start.
+sdk_name is : iphonesimulator12.2
+build to simulator, cp Framework/simulator/* to Framework/build
+cp framework file done.

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1020"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# &#x5de5;&#x7a0b;&#x76ee;&#x5f55;&#10;rootPath = &quot;${PROJECT_DIR}/zfplayer+ijkplayer+autoframework/&quot;&#10;# &#x9700;&#x8981;&#x7f16;&#x8bd1;&#x7684;Framework&#x6240;&#x5728;&#x76ee;&#x5f55;&#xff0c;&#x5c06;&#x628a;&#x5bf9;&#x5e94;&#x7684;Framework&#x590d;&#x5236;&#x5230;&#x8fd9;&#x4e2a;&#x76ee;&#x5f55;&#10;targetPath=&quot;Framework/build&quot;&#10;# &#x6a21;&#x62df;&#x5668;Framework&#x6240;&#x5728;&#x76ee;&#x5f55;&#xff08;&#x6e90;&#x76ee;&#x5f55;&#xff09;&#10;simulatorFile=&quot;Framework/simulator/*&quot;&#10;# &#x771f;&#x673a;Framework&#x6240;&#x5728;&#x76ee;&#x5f55;&#xff08;&#x6e90;&#x76ee;&#x5f55;&#xff08;&#10;iphoneFile=&quot;Framework/iphone/*&quot;&#10;&#10;# &#x5c06;&#x811a;&#x672c;&#x65e5;&#x5fd7;&#x8bb0;&#x5f55;&#x5728;&#x6307;&#x5b9a;&#x6587;&#x4ef6;&#10;exec &gt; ${rootPath}prebuild.log 2&gt;&amp;1&#10;echo &quot;cp framework file start.&quot;&#10;&#10;# &#x5207;&#x6362;&#x5de5;&#x4f5c;&#x76ee;&#x5f55;&#10;cd &quot;${rootPath}&quot;&#10;echo &quot;sdk_name is : ${SDK_NAME}&quot;&#10;sourceFiles=&quot;&quot;&#10;# &#x6839;&#x636e;${SDK_NAME}&#x5224;&#x65ad;&#x662f;&#x6a21;&#x62df;&#x5668;&#x8fd8;&#x662f;&#x771f;&#x673a;&#10;if [[ &quot;${SDK_NAME}&quot; == iphonesimulator* ]]; then&#10;# ${SDK_NAME}&#x4ee5;iphonesimulator&#x5f00;&#x5934;&#xff0c;&#x8868;&#x793a;&#x662f;&#x6a21;&#x62df;&#x5668;&#10;sourceFiles=$simulatorFile&#10;else&#10;sourceFiles=$iphoneFile&#10;fi&#10;echo &quot;build to simulator, cp $sourceFiles to $targetPath&quot;&#10;cp -f -r $sourceFiles $targetPath&#10;echo &quot;cp framework file done.&quot;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "A2D990BA2281866100B68CE1"
+                     BuildableName = "zfplayer+ijkplayer+autoframework.app"
+                     BlueprintName = "zfplayer+ijkplayer+autoframework"
+                     ReferencedContainer = "container:zfplayer+ijkplayer+autoframework.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A2D990BA2281866100B68CE1"
+               BuildableName = "zfplayer+ijkplayer+autoframework.app"
+               BlueprintName = "zfplayer+ijkplayer+autoframework"
+               ReferencedContainer = "container:zfplayer+ijkplayer+autoframework.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <Testables>
+      </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A2D990BA2281866100B68CE1"
+            BuildableName = "zfplayer+ijkplayer+autoframework.app"
+            BlueprintName = "zfplayer+ijkplayer+autoframework"
+            ReferencedContainer = "container:zfplayer+ijkplayer+autoframework.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A2D990BA2281866100B68CE1"
+            BuildableName = "zfplayer+ijkplayer+autoframework.app"
+            BlueprintName = "zfplayer+ijkplayer+autoframework"
+            ReferencedContainer = "container:zfplayer+ijkplayer+autoframework.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+      <AdditionalOptions>
+      </AdditionalOptions>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A2D990BA2281866100B68CE1"
+            BuildableName = "zfplayer+ijkplayer+autoframework.app"
+            BlueprintName = "zfplayer+ijkplayer+autoframework"
+            ReferencedContainer = "container:zfplayer+ijkplayer+autoframework.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
