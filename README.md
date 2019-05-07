@@ -24,7 +24,7 @@ rootPath = "${PROJECT_DIR}/zfplayer+ijkplayer+autoframework/"
 targetPath="Framework/build"
 # 模拟器Framework所在目录（源目录）
 simulatorFile="Framework/simulator/*"
-# 真机Framework所在目录（源目录（
+# 真机Framework所在目录（源目录）
 iphoneFile="Framework/iphone/*"
 
 # 将脚本日志记录在指定文件
@@ -48,4 +48,10 @@ echo "cp framework file done."
 ```
 
 最后，随意将模拟器或真机的Framework复制一份到targetPath，然后将targetPath目录下的Framework添加到工程中。
-注：以上代码是本工程使用的脚本，如需使用请修改对应的目录。
+
+注：
+1. 以上代码是本工程使用的脚本，如需使用请修改对应的目录。
+2. 添加Framework时不要选中`Copy items if needed`，并保证工程设置-target-Build Settings-Search Paths-Framework Search Paths中有脚本中的`targetPath`目录。
+
+![屏幕快照 2019-05-07 下午10.10.07.png](https://i.loli.net/2019/05/07/5cd191def2916.png)
+![屏幕快照 2019-05-07 下午10.09.32.png](https://i.loli.net/2019/05/07/5cd191df2a245.png)
